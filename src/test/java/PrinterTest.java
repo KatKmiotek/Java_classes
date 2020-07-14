@@ -13,6 +13,7 @@ public class PrinterTest {
     public void canPrint(){
         printer.print(10, 2);
         assertEquals(30, printer.getSheetsOfPaperLeft());
+        assertEquals(80, printer.getToner());
     }
     @Test
     public void cantPrint(){
