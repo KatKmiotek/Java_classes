@@ -4,7 +4,7 @@ public class Printer {
 
     public Printer(){
         this.sheetsOfPaperLeft = 50;
-        this.toner = 100;
+        this.toner = 80;
     }
 
     public int getSheetsOfPaperLeft() {
@@ -23,7 +23,7 @@ public class Printer {
         this.toner = toner;
     }
     public boolean print(int numPages, int numCopies){
-        if(this.sheetsOfPaperLeft >= 20){
+        if(this.sheetsOfPaperLeft >= 20 && this.toner > 0){
             this.sheetsOfPaperLeft -= (numCopies * numPages);
             this.toner -= (numCopies * numPages * 1);
         }
